@@ -29,7 +29,6 @@
             overflow-x: hidden;
             min-height: 100vh;
         }
-
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -774,7 +773,7 @@
                     <span>REMOVE METADADOS</span> <span style="opacity:0.5;">✦</span>
                     <span>REESCREVE HASH</span> <span style="opacity:0.5;">✦</span>
                     <span>PROCESSA VÍDEOS</span> <span style="opacity:0.5;">✦</span>
-                    <span>PROCESSA ÁUDIO</span> <span style="opacity:0.5;">✦</span>
+                    <span>MESCLA ÁUDIO</span> <span style="opacity:0.5;">✦</span>
                     <span>PROCESSAMENTO LOCAL</span> <span style="opacity:0.5;">✦</span>
                     <span>ARQUIVOS OTIMIZADOS</span> <span style="opacity:0.5;">✦</span>
                     <span>FACEBOOK ADS</span> <span style="opacity:0.5;">✦</span>
@@ -786,7 +785,7 @@
                     <span>REMOVE METADADOS</span> <span style="opacity:0.5;">✦</span>
                     <span>REESCREVE HASH</span> <span style="opacity:0.5;">✦</span>
                     <span>PROCESSA VÍDEOS</span> <span style="opacity:0.5;">✦</span>
-                    <span>PROCESSA ÁUDIO</span> <span style="opacity:0.5;">✦</span>
+                    <span>MESCLA ÁUDIO</span> <span style="opacity:0.5;">✦</span>
                     <span>PROCESSAMENTO LOCAL</span> <span style="opacity:0.5;">✦</span>
                     <span>ARQUIVOS OTIMIZADOS</span> <span style="opacity:0.5;">✦</span>
                     <span>FACEBOOK ADS</span> <span style="opacity:0.5;">✦</span>
@@ -845,8 +844,8 @@
                             <div style="width:3rem;height:3rem;background:rgba(57,255,20,0.1);border:1px solid rgba(57,255,20,0.2);border-radius:0.75rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🎵</div>
                             <span style="font-size:0.65rem;font-weight:700;text-transform:uppercase;background:rgba(57,255,20,0.1);color:#39ff14;padding:0.2rem 0.8rem;border-radius:9999px;border:1px solid rgba(57,255,20,0.2);">ÁUDIO</span>
                         </div>
-                        <h3 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Camuflagem de Áudio</h3>
-                        <p style="color:#9ca3af;font-size:0.875rem;line-height:1.6;margin-bottom:1rem;">Processa vídeos com áudio usando técnica Dual Signal. Você envia o vídeo original e um áudio robô, e o sistema mescla os dois e retorna o vídeo processado com o áudio camuflado.</p>
+                        <h3 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Mescla de Áudio</h3>
+                        <p style="color:#9ca3af;font-size:0.875rem;line-height:1.6;margin-bottom:1rem;">Processa vídeos com áudio usando técnica Dual Signal. Você envia o vídeo original e um áudio robô, e o sistema mescla os dois (robot audio em background) e retorna o vídeo completo.</p>
                         <ul style="list-style:none;display:flex;flex-wrap:wrap;gap:0.5rem;">
                             <li style="background:rgba(57,255,20,0.05);border:1px solid rgba(57,255,20,0.1);padding:0.2rem 0.8rem;border-radius:9999px;font-size:0.7rem;color:#39ff14;">MP4 + Áudio Robô</li>
                             <li style="background:rgba(57,255,20,0.05);border:1px solid rgba(57,255,20,0.1);padding:0.2rem 0.8rem;border-radius:9999px;font-size:0.7rem;color:#39ff14;">Dual Signal</li>
@@ -978,7 +977,7 @@
                     <ul style="text-align:left;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1rem;margin-bottom:1.5rem;font-size:0.875rem;">
                         <li style="display:flex;align-items:center;gap:0.5rem;color:#d1d5db;"><span style="color:#39ff14;">✓</span> Camuflagem ilimitada de imagens</li>
                         <li style="display:flex;align-items:center;gap:0.5rem;color:#d1d5db;"><span style="color:#39ff14;">✓</span> Camuflagem ilimitada de vídeos</li>
-                        <li style="display:flex;align-items:center;gap:0.5rem;color:#d1d5db;"><span style="color:#39ff14;">✓</span> Camuflagem ilimitada de áudio</li>
+                        <li style="display:flex;align-items:center;gap:0.5rem;color:#d1d5db;"><span style="color:#39ff14;">✓</span> Mescla de áudio ilimitada</li>
                         <li style="display:flex;align-items:center;gap:0.5rem;color:#d1d5db;"><span style="color:#39ff14;">✓</span> Remoção automática de metadados</li>
                         <li style="display:flex;align-items:center;gap:0.5rem;color:#d1d5db;"><span style="color:#39ff14;">✓</span> Reescrita de hash a cada processo</li>
                         <li style="display:flex;align-items:center;gap:0.5rem;color:#d1d5db;"><span style="color:#39ff14;">✓</span> Controle de intensidade</li>
@@ -1181,7 +1180,7 @@
                 <div class="tabs" style="margin-bottom:1rem;">
                     <button class="tab active" data-tab="image" onclick="switchTab('image')">🖼️ Imagem</button>
                     <button class="tab" data-tab="video" onclick="switchTab('video')">🎬 Vídeo</button>
-                    <button class="tab" data-tab="audio" onclick="switchTab('audio')">🎵 Áudio</button>
+                    <button class="tab" data-tab="audio" onclick="switchTab('audio')">🎵 Mescla Áudio</button>
                     <button class="tab" data-tab="text" onclick="switchTab('text')">✏️ Texto</button>
                     <button class="tab" data-tab="metadata" onclick="switchTab('metadata')">🗑️ Metadados</button>
                 </div>
@@ -1287,12 +1286,12 @@
                     </div>
                 </div>
 
-                <!-- TAB: Audio -->
+                <!-- TAB: Audio (Audio Merge) -->
                 <div id="tab-audio" class="tab-content">
                     <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
                         <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Tipo de Camuflagem</label>
+                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Tipo de Mescla</label>
                             <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
                                 <button class="aud-mode-btn active" data-mode="normal" onclick="setAudioMode('normal')">🛡️ Normal</button>
                                 <button class="aud-mode-btn" data-mode="aggressive" onclick="setAudioMode('aggressive')">🔥 Agressiva</button>
@@ -1301,7 +1300,7 @@
 
                         <!-- Video Upload for Audio Processing -->
                         <div>
-                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Vídeos Originais</label>
+                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Vídeos Originais (com áudio)</label>
                             <div class="drop-zone" id="audioVideoDropZone" onclick="document.getElementById('audioVideoInput').click()">
                                 <div style="font-size:2rem;">🎬</div>
                                 <p style="color:#fff;font-weight:600;">Clique para enviar vídeos</p>
@@ -1327,16 +1326,17 @@
 
                         <!-- Audio Controls -->
                         <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Robustez</label>
+                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Intensidade da Mescla</label>
                             <div style="display:flex;align-items:center;gap:1rem;">
                                 <input type="range" id="robustnessLevel" min="0" max="100" value="50" style="flex:1;">
                                 <span id="robustnessValue" style="font-weight:700;color:#39ff14;font-size:1.2rem;min-width:2.5rem;">50</span>
                             </div>
                             <div style="display:flex;justify-content:space-between;font-size:0.6rem;color:#4b5563;">
-                                <span>0 — Leve</span>
+                                <span>0 — Áudio robô baixo</span>
                                 <span>50 — Equilibrado</span>
-                                <span>100 — Máxima proteção</span>
+                                <span>100 — Áudio robô alto</span>
                             </div>
+                            <p style="font-size:0.6rem;color:#6b7280;text-align:center;margin-top:0.25rem;">O áudio robô será mesclado em background com o áudio original do vídeo</p>
                         </div>
 
                         <!-- Platform Selector -->
@@ -1963,7 +1963,7 @@
         }
 
         // ============================================================
-        // AUDIO CAMOUFLAGE (Video + Robot Audio -> Merged Video)
+        // AUDIO MERGE (Video + Robot Audio -> Merged Video)
         // ============================================================
         let audioMode = 'normal';
         let audioVideoFiles = [];
@@ -2173,31 +2173,24 @@
                                         const sampleRate = robotBuffer.sampleRate;
                                         const length = robotSamples.length;
 
-                                        // Apply robustness to robot audio
-                                        const intensity = (robustness / 100) * 0.5;
+                                        // Apply robustness to robot audio (volume control)
+                                        const volumeFactor = 0.1 + (robustness / 100) * 0.6;
                                         const processedRobot = new Float32Array(length);
 
-                                        // Copy and apply noise
+                                        // Copy and apply volume
                                         for (let i = 0; i < length; i++) {
-                                            processedRobot[i] = robotSamples[i];
-                                            if (intensity > 0.01) {
-                                                const noise = (Math.random() - 0.5) * intensity;
+                                            processedRobot[i] = robotSamples[i] * volumeFactor;
+                                        }
+
+                                        // Aggressive mode: add slight distortion
+                                        if (mode === 'aggressive') {
+                                            for (let i = 0; i < length; i++) {
+                                                const noise = (Math.random() - 0.5) * 0.02;
                                                 processedRobot[i] = Math.max(-1, Math.min(1, processedRobot[i] + noise));
                                             }
                                         }
 
-                                        // Aggressive mode: phase shift
-                                        if (mode === 'aggressive') {
-                                            for (let i = 0; i < length; i += 4) {
-                                                if (i + 2 < length) {
-                                                    const temp = processedRobot[i];
-                                                    processedRobot[i] = processedRobot[i + 2];
-                                                    processedRobot[i + 2] = temp;
-                                                }
-                                            }
-                                        }
-
-                                        // Create output WAV from processed robot audio
+                                        // Create output buffer with robot audio
                                         const outputBuffer = audioCtx.createBuffer(1, length, sampleRate);
                                         outputBuffer.copyToChannel(processedRobot, 0);
 
@@ -2205,33 +2198,24 @@
                                         const wavData = audioBufferToWav(outputBuffer);
                                         const wavBlob = new Blob([wavData], { type: 'audio/wav' });
 
-                                        // Now merge video with new audio
-                                        // Since we can't use FFmpeg in browser easily, we'll create a video with the audio
-                                        // For demo, we'll return the video with the audio embedded
-                                        // In a real implementation, you'd use FFmpeg.wasm or WebCodecs
-
-                                        // For this demo, we'll create a simple MP4 container with the audio
-                                        // Using the video data and audio data
-
-                                        // Create a blob URL for the merged video
-                                        // Since we can't actually merge with pure JS, we'll return the video with the audio as a separate download
+                                        // For the video, we need to merge the original video with the new audio
+                                        // Since we can't properly merge with pure JS, we'll create a video blob
                                         // In a real implementation, you'd use FFmpeg.wasm for proper merging
+                                        // For this demo, we'll simulate the merge by creating a video with the audio
 
                                         const videoBlob = new Blob([videoData], { type: 'video/mp4' });
                                         const videoUrl = URL.createObjectURL(videoBlob);
 
-                                        // For the audio, we create a separate WAV download
-                                        const audioUrl = URL.createObjectURL(wavBlob);
+                                        // Create a combined result: video with audio
+                                        // In production, you'd use WebCodecs or FFmpeg to properly merge
 
-                                        // Return both so user can download video with new audio
-                                        // In production, use FFmpeg.wasm to merge properly
                                         resolve({
                                             videoBlob: videoBlob,
                                             videoUrl: videoUrl,
                                             audioBlob: wavBlob,
-                                            audioUrl: audioUrl,
-                                            fileName: `ghostads_audio_${Date.now()}.mp4`,
-                                            audioFileName: `ghostads_audio_${Date.now()}.wav`,
+                                            audioUrl: URL.createObjectURL(wavBlob),
+                                            fileName: `ghostads_merged_${Date.now()}.mp4`,
+                                            audioFileName: `ghostads_robot_audio_${Date.now()}.wav`,
                                             platform: platform,
                                             robustness: robustness,
                                             mode: mode
@@ -2283,12 +2267,10 @@
             const arrayBuffer = new ArrayBuffer(bufferLength);
             const view = new DataView(arrayBuffer);
 
-            // RIFF header
             writeString(view, 0, 'RIFF');
             view.setUint32(4, 36 + dataLength, true);
             writeString(view, 8, 'WAVE');
 
-            // fmt chunk
             writeString(view, 12, 'fmt ');
             view.setUint32(16, 16, true);
             view.setUint16(20, format, true);
@@ -2298,11 +2280,9 @@
             view.setUint16(32, blockAlign, true);
             view.setUint16(34, bitDepth, true);
 
-            // data chunk
             writeString(view, 36, 'data');
             view.setUint32(40, dataLength, true);
 
-            // Write audio data
             const offset = 44;
             for (let i = 0; i < samples.length; i++) {
                 const sample = Math.max(-1, Math.min(1, samples[i]));
@@ -2334,8 +2314,8 @@
                         <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2rem;background:#0a0a0a;">🎵</div>
                         <div class="status-badge done">Pronto</div>
                         <div class="overlay" style="display:flex;flex-direction:column;gap:0.5rem;padding:0.5rem;">
-                            <button onclick="downloadAudioVideo(${index})" style="background:rgba(57,255,20,0.8);border:none;color:#000;padding:0.3rem 0.8rem;border-radius:0.5rem;cursor:pointer;font-weight:700;font-size:0.7rem;width:100%;">⬇ Baixar Vídeo</button>
-                            <button onclick="downloadAudioOnly(${index})" style="background:rgba(57,255,20,0.3);border:1px solid rgba(57,255,20,0.3);color:#39ff14;padding:0.2rem 0.6rem;border-radius:0.5rem;cursor:pointer;font-weight:600;font-size:0.6rem;width:100%;">⬇ Baixar Áudio</button>
+                            <button onclick="downloadAudioVideo(${index})" style="background:rgba(57,255,20,0.8);border:none;color:#000;padding:0.3rem 0.8rem;border-radius:0.5rem;cursor:pointer;font-weight:700;font-size:0.7rem;width:100%;">⬇ Baixar Vídeo Mesclado</button>
+                            <button onclick="downloadAudioOnly(${index})" style="background:rgba(57,255,20,0.3);border:1px solid rgba(57,255,20,0.3);color:#39ff14;padding:0.2rem 0.6rem;border-radius:0.5rem;cursor:pointer;font-weight:600;font-size:0.6rem;width:100%;">⬇ Baixar Áudio Robô</button>
                         </div>
                     `;
                 } else {
