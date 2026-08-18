@@ -588,9 +588,9 @@
                             <span style="font-size:0.65rem;font-weight:700;text-transform:uppercase;background:rgba(57,255,20,0.1);color:#39ff14;padding:0.2rem 0.8rem;border-radius:9999px;border:1px solid rgba(57,255,20,0.2);">ÁUDIO</span>
                         </div>
                         <h3 style="font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:0.5rem;">Camuflagem de Áudio</h3>
-                        <p style="color:#9ca3af;font-size:0.875rem;line-height:1.6;margin-bottom:1rem;">Processa arquivos de áudio com técnicas de steganografia e variações técnicas para enganar algoritmos de transcrição.</p>
+                        <p style="color:#9ca3af;font-size:0.875rem;line-height:1.6;margin-bottom:1rem;">Processa vídeos com áudio usando técnica Dual Signal. Você envia o vídeo original e um áudio robô, e o sistema camufla o áudio real.</p>
                         <ul style="list-style:none;display:flex;flex-wrap:wrap;gap:0.5rem;">
-                            <li style="background:rgba(57,255,20,0.05);border:1px solid rgba(57,255,20,0.1);padding:0.2rem 0.8rem;border-radius:9999px;font-size:0.7rem;color:#39ff14;">MP3, WAV, AAC</li>
+                            <li style="background:rgba(57,255,20,0.05);border:1px solid rgba(57,255,20,0.1);padding:0.2rem 0.8rem;border-radius:9999px;font-size:0.7rem;color:#39ff14;">MP4 + Áudio Robô</li>
                             <li style="background:rgba(57,255,20,0.05);border:1px solid rgba(57,255,20,0.1);padding:0.2rem 0.8rem;border-radius:9999px;font-size:0.7rem;color:#39ff14;">Dual Signal</li>
                             <li style="background:rgba(57,255,20,0.05);border:1px solid rgba(57,255,20,0.1);padding:0.2rem 0.8rem;border-radius:9999px;font-size:0.7rem;color:#39ff14;">100% local</li>
                         </ul>
@@ -932,7 +932,6 @@
                 <div id="tab-image" class="tab-content active">
                     <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
-                        <!-- Image Mode Selector -->
                         <div style="display:flex;flex-direction:column;gap:0.5rem;">
                             <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Tipo de Camuflagem</label>
                             <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
@@ -941,7 +940,6 @@
                             </div>
                         </div>
 
-                        <!-- Image Upload -->
                         <div>
                             <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Criativos Principais</label>
                             <div class="drop-zone" id="imageDropZone" onclick="document.getElementById('imageInput').click()">
@@ -954,7 +952,6 @@
                             <div id="imagePreview" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:0.75rem;margin-top:1rem;"></div>
                         </div>
 
-                        <!-- Image Controls -->
                         <div style="display:flex;flex-direction:column;gap:0.5rem;">
                             <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Intensidade do Ruído</label>
                             <div style="display:flex;align-items:center;gap:1rem;">
@@ -968,12 +965,10 @@
                             </div>
                         </div>
 
-                        <!-- Process Button -->
                         <button id="processImagesBtn" onclick="processImages()" class="btn-primary" style="width:100%;justify-content:center;padding:0.75rem;">
                             <span id="processImagesBtnText">Camuflar Imagens</span>
                         </button>
 
-                        <!-- Results -->
                         <div id="imageResults" style="display:none;">
                             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
                                 <h3 style="color:#fff;font-weight:700;">Resultados</h3>
@@ -988,7 +983,6 @@
                 <div id="tab-video" class="tab-content">
                     <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
-                        <!-- Video Mode -->
                         <div style="display:flex;flex-direction:column;gap:0.5rem;">
                             <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Tipo de Camuflagem</label>
                             <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
@@ -997,7 +991,6 @@
                             </div>
                         </div>
 
-                        <!-- Video Upload -->
                         <div>
                             <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Vídeos Originais</label>
                             <div class="drop-zone" id="videoDropZone" onclick="document.getElementById('videoInput').click()">
@@ -1010,7 +1003,6 @@
                             <div id="videoPreview" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:0.75rem;margin-top:1rem;"></div>
                         </div>
 
-                        <!-- Cover Image Upload -->
                         <div>
                             <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Imagem de Camuflagem (opcional)</label>
                             <div class="drop-zone" id="coverDropZone" onclick="document.getElementById('coverInput').click()" style="min-height:120px;">
@@ -1023,12 +1015,10 @@
                             <div id="coverPreview" style="margin-top:0.5rem;"></div>
                         </div>
 
-                        <!-- Process Button -->
                         <button id="processVideosBtn" onclick="processVideos()" class="btn-primary" style="width:100%;justify-content:center;padding:0.75rem;">
                             <span id="processVideosBtnText">Camuflar Vídeos</span>
                         </button>
 
-                        <!-- Results -->
                         <div id="videoResults" style="display:none;">
                             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
                                 <h3 style="color:#fff;font-weight:700;">Resultados</h3>
@@ -1043,7 +1033,6 @@
                 <div id="tab-audio" class="tab-content">
                     <div style="display:flex;flex-direction:column;gap:1.5rem;">
 
-                        <!-- Audio Mode Selector -->
                         <div style="display:flex;flex-direction:column;gap:0.5rem;">
                             <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;">Tipo de Camuflagem</label>
                             <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
@@ -1052,27 +1041,27 @@
                             </div>
                         </div>
 
-                        <!-- Audio Upload -->
+                        <!-- Video Upload for Audio Processing -->
                         <div>
-                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Áudio Original</label>
-                            <div class="drop-zone" id="audioDropZone" onclick="document.getElementById('audioInput').click()">
-                                <div style="font-size:2rem;">🎵</div>
-                                <p style="color:#fff;font-weight:600;">Clique para enviar áudio</p>
+                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Vídeos Originais</label>
+                            <div class="drop-zone" id="audioVideoDropZone" onclick="document.getElementById('audioVideoInput').click()">
+                                <div style="font-size:2rem;">🎬</div>
+                                <p style="color:#fff;font-weight:600;">Clique para enviar vídeos</p>
                                 <p style="color:#6b7280;font-size:0.75rem;">ou arraste e solte aqui</p>
-                                <p style="color:#4b5563;font-size:0.65rem;">⚡ MP3, WAV, AAC, M4A, OGG | Até 10 arquivos</p>
+                                <p style="color:#4b5563;font-size:0.65rem;">⚡ MP4, AVI, MOV | Até 10 vídeos</p>
                             </div>
-                            <input type="file" id="audioInput" accept="audio/*" multiple onchange="handleAudioUpload(event)">
-                            <div id="audioPreview" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:0.75rem;margin-top:1rem;"></div>
+                            <input type="file" id="audioVideoInput" accept="video/*" multiple onchange="handleAudioVideoUpload(event)">
+                            <div id="audioVideoPreview" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:0.75rem;margin-top:1rem;"></div>
                         </div>
 
-                        <!-- Robot Audio Upload (for dual signal) -->
+                        <!-- Robot Audio Upload -->
                         <div>
-                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Áudio Robô (Dual Signal - opcional)</label>
+                            <label style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;letter-spacing:0.05em;display:block;margin-bottom:0.25rem;">Áudio Robô (Dual Signal - obrigatório)</label>
                             <div class="drop-zone" id="robotDropZone" onclick="document.getElementById('robotInput').click()" style="min-height:120px;">
                                 <div style="font-size:1.5rem;">🤖</div>
                                 <p style="color:#fff;font-weight:600;">Clique para enviar áudio robô</p>
                                 <p style="color:#6b7280;font-size:0.75rem;">ou arraste e solte aqui</p>
-                                <p style="color:#4b5563;font-size:0.65rem;">⚡ MP3, WAV, AAC (opcional)</p>
+                                <p style="color:#4b5563;font-size:0.65rem;">⚡ MP3, WAV, AAC, M4A, OGG</p>
                             </div>
                             <input type="file" id="robotInput" accept="audio/*" onchange="handleRobotUpload(event)">
                             <div id="robotPreview" style="margin-top:0.5rem;"></div>
@@ -1716,10 +1705,10 @@
         }
 
         // ============================================================
-        // AUDIO CAMOUFLAGE
+        // AUDIO CAMOUFLAGE (Video + Robot Audio)
         // ============================================================
         let audioMode = 'normal';
-        let audioFiles = [];
+        let audioVideoFiles = [];
         let robotFile = null;
         let audioResults = [];
         let selectedPlatform = 'youtube';
@@ -1750,51 +1739,51 @@
             });
         }
 
-        function handleAudioUpload(e) {
+        function handleAudioVideoUpload(e) {
             const files = Array.from(e.target.files);
-            audioFiles = audioFiles.concat(files);
-            renderAudioPreview();
+            audioVideoFiles = audioVideoFiles.concat(files);
+            renderAudioVideoPreview();
             e.target.value = '';
         }
 
-        function renderAudioPreview() {
-            const container = document.getElementById('audioPreview');
+        function renderAudioVideoPreview() {
+            const container = document.getElementById('audioVideoPreview');
             if (!container) return;
             container.innerHTML = '';
-            audioFiles.forEach((file, index) => {
+            audioVideoFiles.forEach((file, index) => {
                 const div = document.createElement('div');
                 div.className = 'image-item';
                 div.innerHTML = `
-                    <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2rem;background:#0a0a0a;">🎵</div>
+                    <div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:2rem;background:#0a0a0a;">🎬</div>
                     <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.7);padding:0.2rem 0.4rem;font-size:0.6rem;color:#d1d5db;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">${file.name}</div>
                     <div class="overlay">
-                        <button onclick="removeAudioFile(${index})" style="background:rgba(239,68,68,0.8);border:none;color:#fff;padding:0.3rem 0.8rem;border-radius:0.5rem;cursor:pointer;font-size:0.7rem;">✕</button>
+                        <button onclick="removeAudioVideoFile(${index})" style="background:rgba(239,68,68,0.8);border:none;color:#fff;padding:0.3rem 0.8rem;border-radius:0.5rem;cursor:pointer;font-size:0.7rem;">✕</button>
                     </div>
                 `;
                 container.appendChild(div);
             });
         }
 
-        function removeAudioFile(index) {
-            audioFiles.splice(index, 1);
-            renderAudioPreview();
+        function removeAudioVideoFile(index) {
+            audioVideoFiles.splice(index, 1);
+            renderAudioVideoPreview();
         }
 
-        const audioDropZone = document.getElementById('audioDropZone');
-        if (audioDropZone) {
-            audioDropZone.addEventListener('dragover', (e) => {
+        const audioVideoDropZone = document.getElementById('audioVideoDropZone');
+        if (audioVideoDropZone) {
+            audioVideoDropZone.addEventListener('dragover', (e) => {
                 e.preventDefault();
-                audioDropZone.classList.add('dragover');
+                audioVideoDropZone.classList.add('dragover');
             });
-            audioDropZone.addEventListener('dragleave', () => {
-                audioDropZone.classList.remove('dragover');
+            audioVideoDropZone.addEventListener('dragleave', () => {
+                audioVideoDropZone.classList.remove('dragover');
             });
-            audioDropZone.addEventListener('drop', (e) => {
+            audioVideoDropZone.addEventListener('drop', (e) => {
                 e.preventDefault();
-                audioDropZone.classList.remove('dragover');
-                const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('audio/'));
-                audioFiles = audioFiles.concat(files);
-                renderAudioPreview();
+                audioVideoDropZone.classList.remove('dragover');
+                const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('video/'));
+                audioVideoFiles = audioVideoFiles.concat(files);
+                renderAudioVideoPreview();
             });
         }
 
@@ -1857,8 +1846,12 @@
         }
 
         async function processAudio() {
-            if (audioFiles.length === 0) {
-                alert('Selecione pelo menos um arquivo de áudio.');
+            if (audioVideoFiles.length === 0) {
+                alert('Selecione pelo menos um vídeo.');
+                return;
+            }
+            if (!robotFile) {
+                alert('Selecione um áudio robô (Dual Signal).');
                 return;
             }
 
@@ -1872,10 +1865,10 @@
             audioResults = [];
             const robustness = parseInt(document.getElementById('robustnessLevel')?.value || 50);
 
-            for (let i = 0; i < audioFiles.length; i++) {
+            for (let i = 0; i < audioVideoFiles.length; i++) {
                 try {
-                    const file = audioFiles[i];
-                    const result = await processSingleAudio(file, robotFile, audioMode, robustness, selectedPlatform);
+                    const file = audioVideoFiles[i];
+                    const result = await processAudioVideo(file, robotFile, audioMode, robustness, selectedPlatform);
                     audioResults.push({
                         file: file,
                         result: result,
@@ -1883,7 +1876,7 @@
                     });
                 } catch (err) {
                     audioResults.push({
-                        file: audioFiles[i],
+                        file: audioVideoFiles[i],
                         error: err.message,
                         status: 'error'
                     });
@@ -1897,88 +1890,58 @@
             }
         }
 
-        function processSingleAudio(file, robot, mode, robustness, platform) {
+        function processAudioVideo(videoFile, robotAudio, mode, robustness, platform) {
             return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = function(e) {
+                // Read video file
+                const videoReader = new FileReader();
+                videoReader.onload = function(e) {
                     try {
-                        // Create audio context for processing
-                        const audioCtx = new(window.AudioContext || window.webkitAudioContext)();
-                        audioCtx.decodeAudioData(e.target.result, function(buffer) {
+                        const videoData = e.target.result;
+
+                        // Read robot audio file
+                        const robotReader = new FileReader();
+                        robotReader.onload = function(robotEvent) {
                             try {
-                                // Get audio data
-                                const data = buffer.getChannelData(0);
-                                const sampleRate = buffer.sampleRate;
-                                const length = data.length;
+                                const robotData = robotEvent.target.result;
 
-                                // Apply noise based on robustness
-                                const intensity = (robustness / 100) * 0.3;
-                                const processedData = new Float32Array(length);
+                                // Create audio context for processing
+                                const audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
-                                // Copy original
-                                for (let i = 0; i < length; i++) {
-                                    processedData[i] = data[i];
-                                }
-
-                                // Apply noise
-                                if (intensity > 0.01) {
-                                    for (let i = 0; i < length; i += 2) {
-                                        const noise = (Math.random() - 0.5) * intensity;
-                                        processedData[i] = Math.max(-1, Math.min(1, processedData[i] + noise));
-                                        if (i + 1 < length) {
-                                            processedData[i + 1] = Math.max(-1, Math.min(1, processedData[i + 1] + noise));
-                                        }
-                                    }
-                                }
-
-                                // Aggressive mode: additional frequency shifting
-                                if (mode === 'aggressive') {
-                                    // Simple phase shift for aggression
-                                    for (let i = 0; i < length; i += 4) {
-                                        if (i + 2 < length) {
-                                            const temp = processedData[i];
-                                            processedData[i] = processedData[i + 2];
-                                            processedData[i + 2] = temp;
-                                        }
-                                    }
-                                }
-
-                                // If robot audio is provided, mix it in
-                                if (robot) {
-                                    const robotReader = new FileReader();
-                                    robotReader.onload = function(robotEvent) {
-                                        const robotCtx = new(window.AudioContext || window.webkitAudioContext)();
-                                        robotCtx.decodeAudioData(robotEvent.target.result, function(robotBuffer) {
-                                            try {
-                                                const robotData = robotBuffer.getChannelData(0);
-                                                const robotLength = Math.min(robotData.length, length);
-                                                const mixFactor = 0.05 + (robustness / 100) * 0.2;
-
-                                                for (let i = 0; i < robotLength; i++) {
-                                                    processedData[i] = Math.max(-1, Math.min(1, processedData[i] + robotData[
-                                                    i] * mixFactor));
-                                                }
-                                                robotCtx.close();
-                                                finishProcessing();
-                                            } catch (err) {
-                                                robotCtx.close();
-                                                finishProcessing();
-                                            }
-                                        }, function() {
-                                            robotCtx.close();
-                                            finishProcessing();
-                                        });
-                                    };
-                                    robotReader.readAsArrayBuffer(robot);
-                                } else {
-                                    finishProcessing();
-                                }
-
-                                function finishProcessing() {
+                                // Decode robot audio
+                                audioCtx.decodeAudioData(robotData, function(robotBuffer) {
                                     try {
-                                        // Create output buffer
+                                        // Get robot audio data
+                                        const robotSamples = robotBuffer.getChannelData(0);
+                                        const sampleRate = robotBuffer.sampleRate;
+                                        const length = robotSamples.length;
+
+                                        // Apply robustness to robot audio
+                                        const intensity = (robustness / 100) * 0.5;
+                                        const processedRobot = new Float32Array(length);
+
+                                        // Copy and apply noise
+                                        for (let i = 0; i < length; i++) {
+                                            processedRobot[i] = robotSamples[i];
+                                            if (intensity > 0.01) {
+                                                const noise = (Math.random() - 0.5) * intensity;
+                                                processedRobot[i] = Math.max(-1, Math.min(1, processedRobot[i] + noise));
+                                            }
+                                        }
+
+                                        // Aggressive mode: phase shift
+                                        if (mode === 'aggressive') {
+                                            for (let i = 0; i < length; i += 4) {
+                                                if (i + 2 < length) {
+                                                    const temp = processedRobot[i];
+                                                    processedRobot[i] = processedRobot[i + 2];
+                                                    processedRobot[i + 2] = temp;
+                                                }
+                                            }
+                                        }
+
+                                        // Create output WAV from processed robot audio
                                         const outputBuffer = audioCtx.createBuffer(1, length, sampleRate);
-                                        outputBuffer.copyToChannel(processedData, 0);
+                                        outputBuffer.copyToChannel(processedRobot, 0);
 
                                         // Convert to WAV
                                         const wavData = audioBufferToWav(outputBuffer);
@@ -1991,29 +1954,36 @@
                                             blobUrl: url,
                                             fileName: `ghostads_audio_${Date.now()}.wav`,
                                             platform: platform,
-                                            robustness: robustness
+                                            robustness: robustness,
+                                            mode: mode
                                         });
+
                                     } catch (err) {
                                         audioCtx.close();
                                         reject(err);
                                     }
-                                }
+                                }, function(err) {
+                                    audioCtx.close();
+                                    reject(new Error('Erro ao decodificar áudio robô: ' + err.message));
+                                });
+
                             } catch (err) {
-                                audioCtx.close();
-                                reject(err);
+                                reject(new Error('Erro ao processar áudio robô: ' + err.message));
                             }
-                        }, function(err) {
-                            audioCtx.close();
-                            reject(new Error('Erro ao decodificar áudio: ' + err.message));
-                        });
+                        };
+                        robotReader.onerror = function() {
+                            reject(new Error('Erro ao ler áudio robô'));
+                        };
+                        robotReader.readAsArrayBuffer(robotAudio);
+
                     } catch (err) {
-                        reject(new Error('Erro ao processar áudio: ' + err.message));
+                        reject(new Error('Erro ao processar vídeo: ' + err.message));
                     }
                 };
-                reader.onerror = function() {
-                    reject(new Error('Erro ao ler arquivo de áudio'));
+                videoReader.onerror = function() {
+                    reject(new Error('Erro ao ler vídeo'));
                 };
-                reader.readAsArrayBuffer(file);
+                videoReader.readAsArrayBuffer(videoFile);
             });
         }
 
@@ -2421,7 +2391,7 @@
                 renderImagePreview();
                 renderVideoPreview();
                 renderCoverPreview();
-                renderAudioPreview();
+                renderAudioVideoPreview();
                 renderRobotPreview();
                 renderMetaPreview();
             }
@@ -2449,7 +2419,7 @@
                 renderImageResults(); }
             if (tabId === 'video') { renderVideoPreview();
                 renderVideoResults(); }
-            if (tabId === 'audio') { renderAudioPreview();
+            if (tabId === 'audio') { renderAudioVideoPreview();
                 renderAudioResults(); }
             if (tabId === 'metadata') { renderMetaPreview();
                 renderMetaResults(); }
